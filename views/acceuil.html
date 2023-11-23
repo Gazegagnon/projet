@@ -1,0 +1,84 @@
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #banner {
+            background-image: url('img_v/toyota1.jpeg');
+            color: #0a0a0a;
+            text-align: center;
+            padding: 200px;
+          
+        }
+
+        #banner h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        #banner h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-flex;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #070707;
+            background-color: #7be73c;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #f7f3f3;
+        }
+
+        #connection {
+            margin-right: 10px;
+        }
+    </style>
+
+
+    <div id="banner">
+        <h1>Bienvenue à Bord</h1>
+        <h2>Location de véhicule 24h/24h 7j/7j</h2>
+        <?php if(isset($_SESSION['membre']['statut']) == "ADMIN" && is_string($_SESSION['membre']['statut']) && $_SESSION['membre']['statut'] == "ADMIN" ): ?>
+            <a href="connexion.php" class="button" id="connection">Connection</a>
+            
+            <a href="inscription.php" class="button">Inscription</a>
+        <?php endif; ?>
+
+        <div class="text-end text-white">
+         <?= $_SESSION['membre']['statut'] ?? "" ?>
+        </div>
+    </div>
+
+    <?php if(isset($_SESSION['msg'])): ?>
+               <div class="alert alert-success text-center">
+                    <?= $_SESSION['msg'] ?>
+               </div>
+          <?php endif; ?>
+
+    <main class="container-fluid">
+          <h2 class="text-center"></h2>
+
+          <div class="row justify-content-center">
+
+               <?php foreach($vehicules as $vehicule): ?>
+                    <div class="card col-4 mx-2 mb-3 p-0" style="width: 18rem;">
+                         <img src="img_V/<?= $vehicule['image'] ?>" alt="" class="img-fluid">
+                         <div class="card-body">
+                              <h5 class="card-title"><?= $vehicule['prix'] ?></h5>
+                              
+                              <a href=".php?id_vehicule=<?= $vehicule['id_vehicule'] ?>" class="btn btn-primary w-100">Louer</a>
+                         </div>
+                    </div>
+               <?php endforeach; ?>
+          </div>
+
+
+     </main>

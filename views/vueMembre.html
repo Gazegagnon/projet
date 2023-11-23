@@ -1,0 +1,95 @@
+<!-- <br>
+<main class="container">
+ <table class="table table-strepid">
+          <tr class="table-dark">
+               <th>ID Membres</th>
+               <th>Prénom</th>
+               <th>Nom</th>
+               <th>Login</th>
+               <th>Mdp</th>
+               <th>Tel</th>
+               <th>Email</th>
+               <th>Adresse</th>
+               <th>Cp</th>
+               <th>Ville</th>
+               <th>Statut</th>
+               <th>Date d'inscription</th>
+               <th>Action</th>
+          </tr>
+ 
+          <?php foreach($membres as $membre): ?>
+          
+               <tr>
+                    <td> <?= $membre['id_membre']; ?> </td>
+                    <td> <?= $membre['prenom']; ?> </td>
+                    <td> <?= $membre['nom']; ?> </td>
+                    <td> <?= $membre['login']; ?> </td>
+                    <td> <?= $membre['mdp']; ?> </td>
+                    <td> <?= $membre['tel']; ?> </td>
+                    <td> <?= $membre['email']; ?> </td>
+                    <td> <?= $membre['adresse']; ?> </td>
+                    <td> <?= $membre['cp']; ?> </td>
+                    <td> <?= $membre['ville']; ?> </td>
+                    <td> <?= $membre['statut']; ?> </td>
+                    <td> <?= $membre['date_inscription']; ?> </td>
+                    <td>
+                         <a href="?action=update&id_membre=<?= $membre['id_membre']; ?>">UP</a>
+                         <a href="?action=delete&id_membre=<?= $membre['id_membre']; ?>">Del</a>
+                    </td>
+               </tr>
+          <?php endforeach; ?>
+     <table>
+<br>
+     <form action="" method="post" class="container">
+          <input type="hidden" name="id_membre" value="<?= $membreUp['id_membre'] ?? ""; ?>">
+       
+          <div class="form-group col-6">
+               <label for="">Prenom</label>
+               <input type="text" name="prenom" class="form-control" value="<?= $membreUp['prenom'] ?? ""; ?>">
+          </div>
+
+                    
+         <div class="form-group col-6">
+               <label for="">Nom</label>
+               <input type="text" name="nom" class="form-control" value="<?= $membreUp['nom'] ?? ""; ?>">
+          </div>
+
+          <div class="form-group col-6">
+               <label for="">login</label>
+               <input type="text" name="login" class="form-control" value="<?= $membreUp['login'] ?? ""; ?>">
+          </div>
+          <div class="form-group col-6">
+             <label for="">Mot de passe</label>
+             <input type="text" name="mdp" class="form-control" value="<?= $membreUp['mdp'] ?? ""; ?>">
+          </div>
+          <div class="form-group col-6">
+               <label for="">Email</label>
+               <input type="text" name="email" class="form-control" value="<?= $membreUp['email'] ?? ""; ?>">
+          </div>
+               
+          <div class="form-group col-6">
+              <label for="">Adresse</label>
+              <input type="text" name="adresse" class="form-control" value="<?= $membreUp['adresse'] ?? ""; ?>">
+          </div>
+           
+          <div class="form-group col-6">
+             <label for="">Code postal</label>
+             <input type="text" name="cp" class="form-control" value="<?= $membreUp['cp'] ?? ""; ?>">
+          </div>
+
+          <div class="form-group col-6">
+               <label for="">Ville</label>
+               <input type="text" name="ville" class="form-control" value="<?= $membreUp['ville'] ?? ""; ?>">
+          </div>
+
+          <div class="form-group col-6">
+               <label for="">statut</label>
+               <input type="text" name="statut" class="form-control" value="<?= $membreUp['statut'] ?? ""; ?>">
+          </div>
+                   
+          <div class="form-group col-6">
+             <label for="">Date d'inscription</label>
+             <input type="date"  name="date_inscription" class="form-control" value="<?= $membreUp['date_inscription'] ?? ""; ?>">
+          </div>
+          <input type="submit">
+     </form> -->
